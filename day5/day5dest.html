@@ -1,9 +1,15 @@
 <!DOCTYPE html>
 <html lang="en">
     <head>
-
+        <title>Search Results</title>
     </head>
     <body>
-        
+        <h2>Results Page:</h2>
+
+        <script>
+            const params = new URLSearchParams(window.location.search);
+            const userSearch = params.get("query");
+            document.write("You searced for: " + userSearch);
+        </script>
     </body>
 </html>
