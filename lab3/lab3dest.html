@@ -16,12 +16,18 @@
             //Query here is from the lab3.html form;
             const queryValue = urlParams.get("query");
 
-            const outputDiv = document.getElementById("resultOutput");
-
+            const outputDiv = document.getElementById("resultOutput")
+            if(queryValue){
             outputDiv.innerHTML = `
             <p>Query value: ${queryValue}</p>
             `;
-            
+            }     
+            else{
+                outputDiv.innerHTML = `
+                <p> Go back to previous page to input data</p>
+                <a href="lab3.html">Back</a>
+                `;
+            }
         </script>
     </body>
 </html>
