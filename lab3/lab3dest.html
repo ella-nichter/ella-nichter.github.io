@@ -12,7 +12,7 @@
 
         <script>
             const queryString = window.location.search;
-            const urlParams = URLSearchParams(queryString);
+            const urlParams = new URLSearchParams(queryString);
             //Query here is from the lab3.html form;
             const queryValue = urlParams.get("query");
 
