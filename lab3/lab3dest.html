@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+ <head>
+        <title>Search Results</title>
+    </head>
+    <body>
+        <h2>Search Results</h2>
+
+        <div id="resultOutput">
+            <p>Loading...</p>
+        </div>
+
+        <script>
+            const queryString = window.location.search
+            const urlParams = URLSearchParams(queryString)
+            //Query here is from the lab3.html form
+            const queryValue = urlParams.get("query")
+
+            const outputDiv = document.getElementById("resultOutput")
+
+            outputDiv.innerHTML = "<p>Loaded</p>"
+            
+        </script>
+    </body>
+</html>
