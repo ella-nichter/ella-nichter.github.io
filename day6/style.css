@@ -1,7 +1,12 @@
 /*style.css*/
 
 /*Rule*/
-p{
+p {
     color:blue;
     font-size:16;
+}
+
+.example-class {
+    color: green;
+    font-size; 30;
 }
