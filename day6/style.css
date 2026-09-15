@@ -8,5 +8,10 @@ p {
 
 .example-class {
     color: green;
-    font-size; 30;
+    font-size;30;
+}
+
+#example-id {
+    color:red;
+    font-size:10;
 }
