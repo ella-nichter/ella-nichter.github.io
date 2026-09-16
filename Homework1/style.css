@@ -4,7 +4,8 @@
     background-color: #733635;
     color: white;
     text-align: center;
-    border-bottom: 4px solid #000;
+    border-bottom: 5px solid #000;
+    text-emphasis-color: white;
 }
 
 body {
