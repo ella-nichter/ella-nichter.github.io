@@ -1,5 +1,5 @@
 body {
-    background-color: antiquewhite;
+    background-color: rgb(255, 250, 243);
     font-family: arial, sans-serif;
     margin: 40px;
     color: gray
@@ -22,17 +22,21 @@ table {
 }
 
 th, td {
-
+    border: 1px solid grey;
+    padding: 12px;
+    text-align: left;
 }
 
 th {
-
+    background-color: darkgrey;
 }
 
 a {
-
+    color: skyblue;
+    text-decoration: none;
+    font-weight: bold;
 }
 
 a:hover {
-
+    text-decoration: underline;
 }
