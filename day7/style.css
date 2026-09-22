@@ -8,7 +8,7 @@ body{
 }
 
 #player-card{
-    background-color: aquamarine
+    background-color: aquamarine;
     border: 2px solid wheat;
     border-radius: 10px;
     width: 300px;
