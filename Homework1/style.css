@@ -33,4 +33,24 @@ body {
     margin: 8px;
 }
 
+main {
+    background-color: white;
+    width: 850px;
+    margin: 35px auto;
+    padding: 45px;
+    border: 1px solid #ded6ce;
+    border-radius: 10px
+}
+
+section {
+    margin-bottom: 35px;
+}
+
+h2{
+    color: #2f4550;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-size: 25px;
+    border-bottom: 2px solid #d9a675;
+    padding-bottom:8px;
+}
 
