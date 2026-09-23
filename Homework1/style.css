@@ -1,0 +1,36 @@
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: #f4f0ea;
+    color: #3d3b38;
+    margin: 0;
+}
+
+#main-header {
+    background-color: #2f4550;
+    color: white;
+    text-align: center;
+    padding: 40px;
+    border-bottom: 5px solid #d9a675;
+}
+
+#main-header h1 {
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-size: 40px;
+    margin: 0;
+}
+
+#main-header p {
+    color: #e8ddd0;
+    font-size: 17px;
+}
+
+.contact-links a {
+    color: white;
+    text-decoration: none;
+}
+
+.contact-links span {
+    margin: 8px;
+}
+
+
