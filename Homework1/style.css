@@ -54,3 +54,35 @@ h2{
     padding-bottom:8px;
 }
 
+h3{
+    color:#9a5a43;
+    font-size: 17px;
+}
+
+h3 span {
+    color: #666666;
+    font-size: 14px;
+    font-weight: normal;
+}
+
+li {
+    margin-bottom: 7px;
+}
+
+table{
+    width:100%;
+    border-collapse: collapse;
+    margin-top: 15px;
+}
+
+th {
+    background-color: #2f4550;
+    color: white;
+    text-align: left;
+    padding: 12px;
+}
+
+td {
+    border: 1px solid #ded6ce;
+    padding: 12px;
+}
