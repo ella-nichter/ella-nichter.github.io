@@ -10,13 +10,11 @@
         <p class="account-balance">Move Money</p>
         <h2>Account Balance</h2>
 
-        <p id="money-display">Current Balance:$100</p>
+        <p id="money-display">Current Balance: $100</p>
+        <p id="status-message">Deposit or withdraw money.</p>
 
-        <p id="status-message">Deposit or Withdraw</p>
-
-        <button onclick="Deposit()">Deposit Here</button>
-        <button onclick="Withdraw()">Withdraw Here</button>
-
+        <button onclick="deposit()">Deposit $5</button>
+        <button id="withdraw-button" onclick="withdraw()">Withdraw $5</button>
     </div>
 
     <script src="script.js"></script>
