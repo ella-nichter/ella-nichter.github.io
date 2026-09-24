@@ -1,42 +1,74 @@
 body {
-    background-color: rgb(255, 250, 243);
-    font-family: arial, sans-serif;
-    margin: 40px;
-    color: gray
-}
-
-h1 {
-    background-color: rgb(19, 97, 97);
-    color: white;
-    padding: 20px;
-    border-radius: 15px;
+    background-color: #f3eee7;
+    color: #314650;
+    font-family: Arial, Helvetica, sans-serif;
+    margin-top: 80px;
     text-align: center;
+    transition: background-color 0.3s;
 }
 
-table {
-    width: 100%;
-    max-width: 600px;
-    margin: 20px auto;
-    border-collapse: collapse;
-    border: 2px solid gray;
+#player-card {
+    background-color: #ffffff;
+    border: 2px solid #d7b091;
+    border-radius: 12px;
+    margin: 0 auto;
+    padding: 35px;
+    width: 330px;
 }
 
-th, td {
-    border: 1px solid rgb(218, 218, 218);
-    padding: 12px;
-    text-align: left;
-}
-
-th {
-    background-color: rgb(236, 233, 233);
-}
-
-a {
-    color: rgb(8, 36, 48);
-    text-decoration: none;
+.game-label {
+    color: #a35f48;
+    font-size: 13px;
     font-weight: bold;
+    letter-spacing: 1px;
+    margin-bottom: 0;
+    text-transform: uppercase;
 }
 
-a:hover {
-    text-decoration: underline;
+h2 {
+    color: #314650;
+    font-family: Georgia, "Times New Roman", serif;
+    font-size: 30px;
+    margin-top: 5px;
+}
+
+.health-label {
+    color: #777777;
+    font-size: 14px;
+    font-weight: bold;
+    margin-bottom: 0;
+}
+
+#health-display {
+    color: #a35f48;
+    font-family: Georgia, "Times New Roman", serif;
+    font-size: 58px;
+    font-weight: bold;
+    margin: 0;
+}
+
+#status-message {
+    color: #60727a;
+    font-style: italic;
+    margin-bottom: 25px;
+}
+
+button {
+    background-color: #a35f48;
+    border: none;
+    border-radius: 5px;
+    color: white;
+    cursor: pointer;
+    font-size: 16px;
+    font-weight: bold;
+    padding: 12px 22px;
+}
+
+button:hover {
+    background-color: #7d4535;
+}
+
+button:disabled {
+    background-color: #8a8a8a;
+    cursor: not-allowed;
 }
