@@ -1,32 +1,74 @@
-body{
+body {
+    background-color: #f3eee7;
+    color: #314650;
     font-family: Arial, Helvetica, sans-serif;
+    margin-top: 80px;
     text-align: center;
-    margin-top: 50px;
-    background-color: cadetblue;
-    color:white;
     transition: background-color 0.3s;
 }
 
-#player-card{
-    background-color: aquamarine;
-    border: 2px solid wheat;
-    border-radius: 10px;
-    width: 300px;
-    padding: 20px;
+#player-card {
+    background-color: #ffffff;
+    border: 2px solid #d7b091;
+    border-radius: 12px;
     margin: 0 auto;
+    padding: 35px;
+    width: 330px;
 }
 
-button{
-    padding: 10px 20px;
-    font-size: 16px;
+.game-label {
+    color: #a35f48;
+    font-size: 13px;
     font-weight: bold;
-    background-color: rgb(255, 255, 141);
-    color: white;
+    letter-spacing: 1px;
+    margin-bottom: 0;
+    text-transform: uppercase;
+}
+
+h2 {
+    color: #314650;
+    font-family: Georgia, "Times New Roman", serif;
+    font-size: 30px;
+    margin-top: 5px;
+}
+
+.health-label {
+    color: #777777;
+    font-size: 14px;
+    font-weight: bold;
+    margin-bottom: 0;
+}
+
+#health-display {
+    color: #a35f48;
+    font-family: Georgia, "Times New Roman", serif;
+    font-size: 58px;
+    font-weight: bold;
+    margin: 0;
+}
+
+#status-message {
+    color: #60727a;
+    font-style: italic;
+    margin-bottom: 25px;
+}
+
+button {
+    background-color: #a35f48;
     border: none;
     border-radius: 5px;
+    color: white;
     cursor: pointer;
+    font-size: 16px;
+    font-weight: bold;
+    padding: 12px 22px;
 }
 
-button:hover{
-    background-color: crimson;
+button:hover {
+    background-color: #7d4535;
+}
+
+button:disabled {
+    background-color: #8a8a8a;
+    cursor: not-allowed;
 }

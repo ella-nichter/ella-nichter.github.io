@@ -1,30 +1,26 @@
 let playerHealth = 100;
 const damageAmount = 30;
 
-function takeDamage (){
+function takeDamage() {
     playerHealth = playerHealth - damageAmount;
 
     const healthText = document.getElementById("health-display");
     const statusText = document.getElementById("status-message");
+    const button = document.querySelector("button");
 
-    healthText.innerText = playerHealth;
-
-    if(playerHealth > 0)
-    {
+    if (playerHealth > 0) {
         healthText.innerText = playerHealth;
         statusText.innerText = "You've been hit!";
-    }
-    else
-    {
+        statusText.style.color = "#a35f48";
+    } else {
         healthText.innerText = 0;
         statusText.innerText = "Game Over!";
         statusText.style.color = "#ef5a49";
         statusText.style.fontWeight = "bold";
 
-        document.body.style.backgroundColor = #743939;
+        document.body.style.backgroundColor = "#743939";
 
-        document.querySelector("button").diabled = true;
-        document.querySelector("button").innerText = "Dead";
+        button.disabled = true;
+        button.innerText = "Game Over";
     }
-
 }
