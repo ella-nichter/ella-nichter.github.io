@@ -1,12 +1,18 @@
 let checkingAccount = 100;
-const withdrawAmount = 5;
+const transactionAmount = 5;
 
-function moveMoney() {
-    checkingAccount = checkingAccount - withdrawAmount;
+function deposit() {
+    checkingAccount = checkingAccount + transactionAmount;
 
-    const healthText = document.getElementById("health-display");
+    const moneyText = document.getElementById("money-display");
     const statusText = document.getElementById("status-message");
-    const button = document.querySelector("button");
+    const withdrawbutton = document.querySelector("withdraw-button");
+
+    moneyText.innerText = "Current Balance: $" + checkingAccount;
+    statusText.innerText = "$5 deposited!";
+
+    withdrawButton.disabled = false;
+    document.body.style.backgroundColor = "#f3eee7"; 
 
     if (checkingAccount > 0) {
         healthText.innerText = playerHealth;
@@ -22,5 +28,29 @@ function moveMoney() {
 
         button.disabled = true;
         button.innerText = "Out of Money";
+    }
+}
+
+
+function withdraw() {
+    checkingAccount = checkingAccount - transactionAmount;
+
+    const moneyText = document.getElementById("money-display");
+    const statusText = document.getElementById("status-message");
+    const withdrawButton = document.getElementById("withdraw-button");
+
+    if (checkingAccount > 0) {
+        moneyText.innerText = "Current Balance: $" + checkingAccount;
+        statusText.innerText = "$5 withdrawn!";
+        statusText.style.color = "#a35f48";
+    } else {
+        checkingAccount = 0;
+        moneyText.innerText = "Current Balance: $0";
+        statusText.innerText = "Withdrawal limit exceeded!";
+        statusText.style.color = "#ef5a49";
+        statusText.style.fontWeight = "bold";
+
+        withdrawButton.disabled = true;
+        document.body.style.backgroundColor = "#743939";
     }
 }
