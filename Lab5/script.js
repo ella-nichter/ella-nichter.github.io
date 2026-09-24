@@ -1,26 +1,26 @@
-let playerHealth = 100;
-const damageAmount = 30;
+let checkingAccount = 100;
+const withdrawAmount = 5;
 
-function takeDamage() {
-    playerHealth = playerHealth - damageAmount;
+function moveMoney() {
+    checkingAccount = checkingAccount - withdrawAmount;
 
     const healthText = document.getElementById("health-display");
     const statusText = document.getElementById("status-message");
     const button = document.querySelector("button");
 
-    if (playerHealth > 0) {
+    if (checkingAccount > 0) {
         healthText.innerText = playerHealth;
-        statusText.innerText = "You've been hit!";
+        statusText.innerText = "Money Withdrawn";
         statusText.style.color = "#a35f48";
     } else {
         healthText.innerText = 0;
-        statusText.innerText = "Game Over!";
+        statusText.innerText = "Withdrawal Limit Exceeded!";
         statusText.style.color = "#ef5a49";
         statusText.style.fontWeight = "bold";
 
         document.body.style.backgroundColor = "#743939";
 
         button.disabled = true;
-        button.innerText = "Game Over";
+        button.innerText = "Out of Money";
     }
 }
