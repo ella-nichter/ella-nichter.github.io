@@ -25,9 +25,6 @@ function deposit() {
         statusText.style.fontWeight = "bold";
 
         document.body.style.backgroundColor = "#743939";
-
-        button.disabled = true;
-        button.innerText = "Out of Money";
     }
 }
 
