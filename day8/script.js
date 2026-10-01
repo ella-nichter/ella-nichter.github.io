@@ -9,5 +9,10 @@ const contents = [
 function loadInventory() {\
     const listElement = document.getElementById("item-list");
 
-    innerHTML
+    listElement.innerHTML = "";
+
+    for(let i = 0; i< contents.legth; i++)
+    {
+        
+    }
 }
