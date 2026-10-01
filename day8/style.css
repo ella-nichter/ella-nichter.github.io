@@ -7,7 +7,7 @@ body {
     transition: background-color 0.3s;
 }
 
-#inebtory-container {
+#inventory-container {
     background-color: darkslategray;
     border: 2px solid wheat;
     border-radius: 10px;
