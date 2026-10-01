@@ -17,23 +17,23 @@ body {
 }
 
 ul {
-    list-style: none;
+    list-style-type: none;
     padding: 0;
 }
 
 li {
-    background-color: aqua;
+    background-color:aqua;
     margin: 8px 0;
     padding: 10px;
     border-radius: 5px;
     font-weight: bold;
-    color: aquamarine;
+    color: white;
 }
 
 button {
     padding: 10px 20px;
     font-size: 16px;
-    width: 100px;
+    width: 150px;
     font-weight: bold;
     background-color: peru;
     color: white;
