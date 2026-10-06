@@ -1,0 +1,263 @@
+:root {
+  --garnet: #73000a;
+  --deep-garnet: #4c0006;
+  --black: #171313;
+  --cream: #fffaf3;
+  --gold: #f5c453;
+  --pink: #f6d8d7;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  min-height: 100vh;
+  margin: 0;
+  display: grid;
+  place-items: center;
+  padding: 38px 18px;
+  color: var(--black);
+  font-family: "DM Sans", Arial, sans-serif;
+
+  background:
+    radial-gradient(circle at 8% 8%, rgba(245, 196, 83, .95) 0 4px, transparent 4.5px),
+    radial-gradient(circle at 90% 13%, rgba(255, 255, 255, .35) 0 3px, transparent 3.5px),
+    linear-gradient(135deg, var(--deep-garnet), var(--garnet) 55%, #9b1d2b);
+}
+
+.checklist-card {
+  width: min(100%, 620px);
+  overflow: hidden;
+  background: var(--cream);
+  border: 4px solid var(--black);
+  border-radius: 26px;
+  box-shadow: 10px 10px 0 var(--black);
+}
+
+header {
+  padding: 38px 42px 32px;
+  color: white;
+  background: var(--black);
+  background-image: linear-gradient(
+    135deg,
+    transparent 0 48%,
+    rgba(115, 0, 10, .75) 48% 52%,
+    transparent 52%
+  );
+}
+
+.eyebrow {
+  margin: 0 0 8px;
+  color: var(--gold);
+  font-size: .75rem;
+  font-weight: 700;
+  letter-spacing: .16em;
+  text-transform: uppercase;
+}
+
+h1,
+h2 {
+  font-family: "Playfair Display", Georgia, serif;
+}
+
+h1 {
+  margin: 0;
+  font-size: clamp(2.35rem, 8vw, 4rem);
+  line-height: .98;
+}
+
+h1 em {
+  color: var(--gold);
+}
+
+.subtitle {
+  max-width: 380px;
+  margin: 14px 0 0;
+  color: #eee6df;
+  line-height: 1.45;
+}
+
+.add-task,
+.list-section {
+  padding: 27px 42px;
+}
+
+.add-task {
+  background: var(--pink);
+  border-bottom: 2px dashed var(--garnet);
+}
+
+label {
+  display: block;
+  margin-bottom: 9px;
+  font-weight: 700;
+}
+
+.input-row {
+  display: flex;
+  gap: 9px;
+}
+
+input {
+  min-width: 0;
+  flex: 1;
+  padding: 13px 14px;
+  border: 2px solid var(--black);
+  border-radius: 10px;
+  outline: none;
+  font: inherit;
+}
+
+input:focus {
+  box-shadow: 0 0 0 4px rgba(115, 0, 10, .22);
+}
+
+button {
+  border: 2px solid var(--black);
+  border-radius: 10px;
+  cursor: pointer;
+  color: white;
+  background: var(--garnet);
+  font: inherit;
+  font-weight: 700;
+  transition: transform .16s ease, box-shadow .16s ease;
+}
+
+button:hover {
+  transform: translate(-2px, -2px);
+  box-shadow: 3px 3px 0 var(--black);
+}
+
+button:active {
+  transform: translate(0, 0);
+  box-shadow: none;
+}
+
+#add-button {
+  white-space: nowrap;
+  padding: 0 16px;
+}
+
+.list-heading {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: 12px;
+}
+
+h2 {
+  margin: 0;
+  font-size: 1.55rem;
+}
+
+#task-count {
+  color: var(--garnet);
+  font-size: .85rem;
+  font-weight: 700;
+}
+
+#checklist {
+  display: grid;
+  gap: 10px;
+  margin: 18px 0 0;
+  padding: 0;
+  list-style: none;
+}
+
+.task-item {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 12px;
+  border: 2px solid var(--black);
+  border-radius: 12px;
+  background: white;
+  animation: slide-in .25s ease-out;
+}
+
+.task-item input {
+  appearance: none;
+  flex: 0 0 22px;
+  width: 22px;
+  height: 22px;
+  margin: 0;
+  padding: 0;
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+.task-item input:checked {
+  border-color: var(--garnet);
+  background: var(--garnet);
+  box-shadow: inset 0 0 0 4px white;
+}
+
+.task-text {
+  flex: 1;
+}
+
+.task-item.completed .task-text {
+  color: #857d79;
+  text-decoration: line-through;
+}
+
+.delete-button {
+  width: 28px;
+  height: 28px;
+  padding: 0;
+  border: 0;
+  color: var(--garnet);
+  background: transparent;
+  font-size: 1.35rem;
+  line-height: 1;
+}
+
+.delete-button:hover {
+  box-shadow: none;
+  color: var(--black);
+}
+
+#empty-message {
+  margin: 19px 0 0;
+  color: #766d69;
+  font-style: italic;
+}
+
+.clear-button {
+  width: 100%;
+  padding: 15px;
+  border-width: 0;
+  border-radius: 0;
+  color: var(--black);
+  background: var(--gold);
+}
+
+@keyframes slide-in {
+  from {
+    opacity: 0;
+    transform: translateY(-8px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@media (max-width: 480px) {
+  header,
+  .add-task,
+  .list-section {
+    padding-left: 24px;
+    padding-right: 24px;
+  }
+
+  .input-row {
+    flex-direction: column;
+  }
+
+  #add-button {
+    padding: 12px;
+  }
+}
