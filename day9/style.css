@@ -1,11 +1,11 @@
+@import url("https://fonts.googleapis.com/css2?family=Anton&family=DM+Mono:wght@400;500&family=Montserrat:ital,wght@0,500;0,600;0,700;0,800;1,700&display=swap");
+
 :root {
   --garnet: #73000a;
-  --wine: #551017;
-  --black: #171717;
-  --white: #ffffff;
-  --blush: #fff1f3;
-  --pink: #f4c7ce;
-  --gray: #6f6868;
+  --black: #101010;
+  --white: #fffefd;
+  --paper: #f5f2ed;
+  --line: #dad6cf;
 }
 
 * {
@@ -15,176 +15,216 @@
 body {
   min-height: 100vh;
   margin: 0;
-  padding: 42px 18px;
+  padding: 45px 18px;
   color: var(--black);
-  font-family: "DM Sans", Arial, sans-serif;
-  background-color: #fdfbfb;
-  background-image: radial-gradient(#ead5d7 1.2px, transparent 1.2px);
-  background-size: 21px 21px;
+  font-family: Montserrat, Arial, sans-serif;
+
+  background:
+    linear-gradient(
+      90deg,
+      transparent 49.6%,
+      #ece8e2 49.6% 50.4%,
+      transparent 50.4%
+    ),
+    var(--paper);
 }
 
 .checklist-card {
-  width: min(100%, 590px);
+  position: relative;
+  width: min(100%, 660px);
   overflow: hidden;
   background: var(--white);
-  border: 1px solid #e9dcdc;
-  border-radius: 22px;
-  box-shadow: 0 18px 45px rgba(62, 21, 26, .13);
+  border: 2px solid var(--black);
+  box-shadow: 9px 9px 0 var(--garnet);
 }
 
 header {
   position: relative;
-  overflow: hidden;
-  padding: 38px 42px 35px;
+  min-height: 217px;
+  padding: 30px 34px;
   color: var(--white);
-  background: var(--garnet);
-}
-
-header::before,
-header::after {
-  position: absolute;
-  content: "✦";
-  color: #f8d8dc;
-  opacity: .75;
+  background: var(--black);
 }
 
 header::before {
-  top: 21px;
-  right: 38px;
-  font-size: 1.55rem;
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  width: 37%;
+  content: "";
+
+  background: repeating-linear-gradient(
+    -45deg,
+    var(--garnet) 0 15px,
+    #8d111d 15px 30px
+  );
+
+  clip-path: polygon(31% 0, 100% 0, 100% 100%, 0 100%);
 }
 
 header::after {
-  right: 82px;
-  bottom: 19px;
-  font-size: .82rem;
+  position: absolute;
+  right: 29px;
+  bottom: 17px;
+  content: "GAMEDAY";
+  color: white;
+  font-family: Anton, Impact, sans-serif;
+  font-size: clamp(2.4rem, 11vw, 5rem);
+  letter-spacing: .03em;
+  line-height: .8;
+  opacity: .95;
+  transform: rotate(-8deg);
 }
 
 .eyebrow {
-  margin: 0 0 9px;
-  color: #f8d8dc;
-  font-size: .72rem;
-  font-weight: 700;
-  letter-spacing: .17em;
+  position: relative;
+  z-index: 1;
+  display: inline-block;
+  margin: 0 0 16px;
+  padding: 7px 10px;
+  color: var(--black);
+  background: var(--white);
+  font-family: "DM Mono", monospace;
+  font-size: .68rem;
+  font-weight: 500;
+  letter-spacing: .1em;
   text-transform: uppercase;
 }
 
-h1,
-h2 {
-  font-family: "Playfair Display", Georgia, serif;
-}
-
 h1 {
+  position: relative;
+  z-index: 1;
+  max-width: 330px;
   margin: 0;
-  font-size: clamp(2.55rem, 9vw, 4.25rem);
-  letter-spacing: -.055em;
-  line-height: .92;
+  font-family: Anton, Impact, sans-serif;
+  font-size: clamp(3.7rem, 14vw, 6.5rem);
+  font-weight: 400;
+  letter-spacing: -.035em;
+  line-height: .78;
+  text-transform: uppercase;
 }
 
 h1 em {
-  color: #f9dadd;
-  font-weight: 700;
+  display: block;
+  color: #eec7cc;
+  font-style: normal;
 }
 
 .subtitle {
-  max-width: 360px;
-  margin: 16px 0 0;
-  color: #fff0f1;
-  font-size: .96rem;
-  line-height: 1.48;
-}
-
-.add-task,
-.list-section {
-  padding: 26px 42px;
+  position: absolute;
+  z-index: 2;
+  right: 25px;
+  bottom: 33px;
+  width: 125px;
+  margin: 0;
+  color: var(--black);
+  font-size: .66rem;
+  font-weight: 800;
+  line-height: 1.38;
+  text-align: right;
+  text-transform: uppercase;
 }
 
 .add-task {
-  background: var(--blush);
-  border-bottom: 1px solid #f0dfe1;
+  display: grid;
+  grid-template-columns: 125px 1fr;
+  gap: 17px;
+  align-items: center;
+  padding: 20px 28px;
+  border-bottom: 2px solid var(--black);
+  background: #fff;
 }
 
 label {
-  display: block;
-  margin-bottom: 9px;
-  color: var(--wine);
-  font-size: .94rem;
-  font-weight: 700;
+  font-family: "DM Mono", monospace;
+  font-size: .73rem;
+  font-weight: 500;
+  line-height: 1.3;
+  text-transform: uppercase;
 }
 
 .input-row {
   display: flex;
-  gap: 9px;
+  gap: 8px;
 }
 
 input {
   min-width: 0;
   flex: 1;
-  padding: 13px 14px;
-  border: 1.5px solid #dec9cc;
-  border-radius: 9px;
+  padding: 12px 11px;
+  border: 1px solid var(--black);
+  border-radius: 0;
   color: var(--black);
-  background: var(--white);
   outline: none;
-  font: inherit;
-}
-
-input::placeholder {
-  color: #ae9fa1;
+  font: 600 .84rem Montserrat, sans-serif;
 }
 
 input:focus {
-  border-color: var(--garnet);
-  box-shadow: 0 0 0 3px rgba(115, 0, 10, .11);
+  padding: 11px 10px;
+  border: 2px solid var(--garnet);
+}
+
+input::placeholder {
+  color: #a19c98;
+  font-weight: 500;
 }
 
 button {
   cursor: pointer;
-  font: inherit;
-  font-weight: 700;
-  transition: transform .16s ease; background: .16s ease;
+  font-family: Montserrat, sans-serif;
+  font-weight: 800;
 }
 
 #add-button {
-  padding: 0 17px;
-  border: 0;
-  border-radius: 9px;
+  flex: 0 0 auto;
+  padding: 0 14px;
+  border: 1px solid var(--garnet);
+  border-radius: 0;
   color: white;
   background: var(--garnet);
+  font-size: .73rem;
+  letter-spacing: .03em;
+  text-transform: uppercase;
+  
 }
 
 #add-button:hover {
-  transform: translateY(-1px);
-  background: #8b0e1a;
+  color: var(--garnet);
+  background: white;
 }
 
-#add-button:active {
-  transform: translateY(1px);
+.list-section {
+  padding: 30px 28px 26px;
 }
 
 .list-heading {
   display: flex;
-  align-items: baseline;
+  align-items: center;
   justify-content: space-between;
-  gap: 12px;
+  padding-bottom: 14px;
+  border-bottom: 4px solid var(--black);
 }
 
 h2 {
   margin: 0;
-  font-size: 1.65rem;
-  letter-spacing: -.035em;
+  font-size: 1rem;
+  font-weight: 800;
+  letter-spacing: .07em;
+  text-transform: uppercase;
 }
 
 #task-count {
   color: var(--garnet);
-  font-size: .82rem;
-  font-weight: 700;
+  font-family: "DM Mono", monospace;
+  font-size: .7rem;
+  font-weight: 500;
 }
 
 #checklist {
   display: grid;
-  gap: 9px;
-  margin: 18px 0 0;
+  gap: 0;
+  margin: 0;
   padding: 0;
   list-style: none;
 }
@@ -192,66 +232,59 @@ h2 {
 .task-item {
   display: flex;
   align-items: center;
-  gap: 12px;
-  padding: 12px;
-  border: 1px solid #eee6e6;
-  border-radius: 10px;
-  background: #fff;
-  box-shadow: 0 2px 4px rgba(28, 7, 9, .025);
-  animation: slide-in .25s ease-out;
+  gap: 13px;
+  min-height: 57px;
+  padding: 10px 4px;
+  border-bottom: 1px solid var(--line);
+  animation: slide-in .22s ease-out;
 }
 
 .task-item input {
   appearance: none;
-  flex: 0 0 21px;
-  width: 21px;
-  height: 21px;
+  flex: 0 0 20px;
+  width: 20px;
+  height: 20px;
   margin: 0;
-  padding: 0;
-  border: 1.5px solid var(--garnet);
-  border-radius: 50%;
+  border: 1.5px solid var(--black);
+  border-radius: 0;
   cursor: pointer;
 }
 
 .task-item input:checked {
+  border-color: var(--garnet);
   background: var(--garnet);
   box-shadow: inset 0 0 0 4px white;
 }
 
 .task-text {
   flex: 1;
-  font-size: .96rem;
-}
-
-.task-item.completed {
-  background: #fff8f8;
+  font-size: .9rem;
+  font-weight: 600;
 }
 
 .task-item.completed .task-text {
-  color: #9b9293;
+  color: #aaa5a0;
   text-decoration: line-through;
 }
 
 .delete-button {
-  width: 29px;
-  height: 29px;
+  width: 28px;
+  height: 28px;
   border: 0;
-  border-radius: 50%;
-  color: var(--garnet);
+  color: #928b86;
   background: transparent;
-  font-size: 1.35rem;
+  font-size: 1.25rem;
   line-height: 1;
 }
 
 .delete-button:hover {
-  color: white;
-  background: var(--garnet);
+  color: var(--garnet);
 }
 
 #empty-message {
-  margin: 19px 0 0;
-  color: var(--gray);
-  font-size: .94rem;
+  margin: 20px 0 0;
+  color: #77716c;
+  font-size: .86rem;
   font-style: italic;
 }
 
@@ -259,44 +292,59 @@ h2 {
   width: 100%;
   padding: 15px;
   border: 0;
-  border-top: 1px solid #eee2e3;
-  color: var(--garnet);
-  background: var(--white);
+  border-top: 2px solid var(--black);
+  border-radius: 0;
+  color: white;
+  background: var(--black);
+  font-size: .74rem;
+  letter-spacing: .12em;
+  text-transform: uppercase;
+
 }
 
 .clear-button:hover {
-  background: var(--blush);
+  background: var(--garnet);
 }
 
 @keyframes slide-in {
   from {
     opacity: 0;
-    transform: translateY(-7px);
+    transform: translateX(-8px);
   }
 
   to {
     opacity: 1;
-    transform: translateY(0);
+    transform: translateX(0);
   }
 }
 
-@media (max-width: 480px) {
+@media (max-width: 500px) {
   body {
-    padding: 22px 12px;
+    padding: 24px 12px;
   }
 
-  header,
-  .add-task,
+  header {
+    min-height: 210px;
+    padding: 27px 23px;
+  }
+
+  .subtitle {
+    right: 18px;
+    bottom: 30px;
+    width: 108px;
+    font-size: .59rem;
+  }
+
+  .add-task {
+    display: block;
+    padding: 20px 22px;
+  }
+
+  label {
+    margin-bottom: 9px;
+  }
+
   .list-section {
-    padding-left: 24px;
-    padding-right: 24px;
-  }
-
-  .input-row {
-    flex-direction: column;
-  }
-
-  #add-button {
-    padding: 12px;
+    padding: 25px 22px 22px;
   }
 }
