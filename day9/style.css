@@ -142,7 +142,7 @@ button {
   cursor: pointer;
   font: inherit;
   font-weight: 700;
-  transition: transform .16s ease, background .16s ease;
+  transition: transform .16s ease; background: .16s ease;
 }
 
 #add-button {
