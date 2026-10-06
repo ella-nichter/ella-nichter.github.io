@@ -3,46 +3,56 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>My Checklist</title>
+  <title>Garnet Gameday Checklist</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&family=Playfair+Display:ital,wght@0,700;0,800;1,700&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
-  <h1>Gameday Checklist</h1>
+  <main class="checklist-card">
+    <header>
+      <p class="eyebrow">Saturday in Columbia</p>
+      <h1>Garnet <em>Gameday</em></h1>
+      <p class="subtitle">
+        The cute little checklist that keeps your tailgate era on track.
+      </p>
+    </header>
 
-  <label for="new-item">Add an item:</label>
-  <input type="text" id="new-item" placeholder="Type a checklist item">
-  <button id="add-button">Add to List</button>
+    <section class="add-task" aria-label="Add a checklist item">
+      <label for="new-item">What’s on the agenda?</label>
 
-  <ul id="checklist">
-    <!-- New checklist items will appear here. -->
-  </ul>
+      <div class="input-row">
+        <input type="text" id="new-item" placeholder="Ex: Pack clear bag">
 
-  <script>
-    const input = document.getElementById("new-item");
-    const addButton = document.getElementById("add-button");
-    const checklist = document.getElementById("checklist");
+        <button id="add-button" type="button">
+          Add it <span aria-hidden="true">✦</span>
+        </button>
+      </div>
+    </section>
 
-    function addItem() {
-      const itemText = input.value.trim();
+    <section class="list-section">
+      <div class="list-heading">
+        <h2>Today’s lineup</h2>
+        <span id="task-count">0 things to do</span>
+      </div>
 
-      if (itemText !== "") {
-        const listItem = document.createElement("li");
-        listItem.textContent = itemText;
+      <ul id="checklist" aria-live="polite"></ul>
 
-        checklist.appendChild(listItem);
+      <p id="empty-message">
+        Your gameday is wide open. Add your first plan!
+      </p>
+    </section>
 
-        input.value = "";
-        input.focus();
-      }
-    }
+    <button id="clear-completed" class="clear-button" type="button">
+      Clear completed
+    </button>
+  </main>
 
-    addButton.addEventListener("click", addItem);
-
-    input.addEventListener("keydown", function (event) {
-      if (event.key === "Enter") {
-        addItem();
-      }
-    });
-  </script>
+  <script src="script.js"></script>
 </body>
 </html>
