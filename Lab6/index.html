@@ -16,26 +16,21 @@
       <div class="sidebar-line"></div>
 
       <nav aria-label="Portal resources">
-        <a class="resource-button"
-           href="https://sc.edu/study/majors_and_degrees/index.php"
-           target="_blank"
-           rel="noopener">
-          Academics <span>↗</span>
-        </a>
+        <button class="resource-button active" type="button" data-section="welcome">
+          Welcome <span>•</span>
+        </button>
 
-        <a class="resource-button"
-           href="https://gamecocksonline.com/"
-           target="_blank"
-           rel="noopener">
-          Athletics <span>↗</span>
-        </a>
+        <button class="resource-button" type="button" data-section="academics">
+          Academics <span>→</span>
+        </button>
 
-        <a class="resource-button"
-           href="https://my.sc.edu/"
-           target="_blank"
-           rel="noopener">
-          Personal Student Plans <span>↗</span>
-        </a>
+        <button class="resource-button" type="button" data-section="athletics">
+          Athletics <span>→</span>
+        </button>
+
+        <button class="resource-button" type="button" data-section="opportunities">
+          Personal Student Plans <span>→</span>
+        </button>
       </nav>
 
       <p class="sidebar-footer">Forever to thee.</p>
@@ -64,12 +59,16 @@
         </p>
 
         <div class="welcome-copy">
-          <p id="welcome-heading">
-            Welcome to your Gamecock Student Portal. Here at the University of
-            South Carolina we care about our students and their individual
-            success while priding ourselves in an inclusive and collaborative
-            educational environment. Get started today!
-          </p>
+          <div>
+            <h3 id="resource-title">Welcome, Gamecock!</h3>
+
+            <p id="welcome-heading">
+              Welcome to your Gamecock Student Portal. Here at the University
+              of South Carolina we care about our students and their individual
+              success while priding ourselves in an inclusive and collaborative
+              educational environment. Get started today!
+            </p>
+          </div>
 
           <button id="encouragement-button" type="button">
             Need a little encouragement?

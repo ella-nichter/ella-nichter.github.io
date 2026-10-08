@@ -35,9 +35,9 @@ body {
 .sidebar-label,
 .eyebrow {
   margin: 0;
-  font-size: .72rem;
+  font-size: 0.72rem;
   font-weight: bold;
-  letter-spacing: .13em;
+  letter-spacing: 0.13em;
   text-transform: uppercase;
 }
 
@@ -45,7 +45,7 @@ body {
   margin: 13px 0 22px;
   font-family: Georgia, "Times New Roman", serif;
   font-size: 2.25rem;
-  line-height: .9;
+  line-height: 0.9;
 }
 
 .sidebar-line {
@@ -68,13 +68,14 @@ body {
   border: 2px solid var(--cream);
   color: var(--black);
   background: var(--cream);
-  font-size: .9rem;
+  cursor: pointer;
+  font-size: 0.9rem;
   font-weight: bold;
-  text-decoration: none;
-  transition: background .2s ease, color .2s ease, transform .2s ease;
+  transition: background 0.2s ease, color 0.2s ease, transform 0.2s ease;
 }
 
-.resource-button:hover {
+.resource-button:hover,
+.resource-button.active {
   color: var(--cream);
   background: var(--dark-garnet);
   transform: translateX(5px);
@@ -98,6 +99,7 @@ main {
 .hero {
   max-width: 930px;
   margin: 0 auto 28px;
+  text-align: center;
 }
 
 .eyebrow {
@@ -109,8 +111,8 @@ h1 {
   font-family: Georgia, "Times New Roman", serif;
   font-size: clamp(3rem, 7vw, 5.8rem);
   font-weight: normal;
-  letter-spacing: -.06em;
-  line-height: .82;
+  letter-spacing: -0.06em;
+  line-height: 0.82;
 }
 
 h1 span {
@@ -141,7 +143,7 @@ h1 span {
 .photo-credit {
   margin: 17px 0 0;
   color: #766e65;
-  font-size: .72rem;
+  font-size: 0.72rem;
 }
 
 .welcome-copy {
@@ -160,6 +162,13 @@ h1 span {
   font-family: Georgia, "Times New Roman", serif;
   font-size: clamp(1.14rem, 2vw, 1.4rem);
   line-height: 1.48;
+}
+
+.welcome-copy h3 {
+  margin: 0 0 10px;
+  color: var(--garnet);
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: 1.55rem;
 }
 
 #encouragement-button {
