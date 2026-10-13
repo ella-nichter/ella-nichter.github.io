@@ -2,27 +2,27 @@
 <html lang="en">
     <head>
         <title>Code Clicker</title>
-        <link rel= "stylesheet" href="style.css">
+        <link rel="stylesheet" href="style.css">
     </head>
     <body>
         <div id="game-container">
             <header>
                 <h1>Code Clicker</h1>
-                <h2 id="score-display"> 0 lines of code</h2>
-                <button id="main-button" onclick="writeCode()">Write Code </buton>
+                <h2 id="score-display">0 lines of code</h2>
+                <button id="main-button" onclick="writeCode()">Write Code</button>
             </header>
 
             <main id="shop">
-                <h3>Hardware Store (manual Upgrade)</h3>
+                <h3>Hardware Store (Manual Upgrade)</h3>
                 <p>Current Click Power: <span id="power-display">1</span></p>
                 <button id="upgrade-button" onClick="buyKeyboard()">
                     Buy Mechanical Keyboard (Cost: <span id="cost-display">50</span>)
                 </button>
-            
+
                 <h3>Hiring Department (Auto Clicking)</h3>
                 <p>Active Interns: <span id="intern-display">0</span></p>
-                <button id="upgrade-button" onClick="buyIntern()">
-                    Hire Intern (Cost: <span id="intern-display-cost">100</span>)
+                <button id="intern-button" onClick="buyIntern()">
+                    Hire Intern (Cost: <span id="cost-intern-display">100</span>)
                 </button>
             </main>
         </div>
@@ -30,5 +30,3 @@
         <script src="script.js"></script>
     </body>
 </html>
-
-
