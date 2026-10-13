@@ -3,8 +3,8 @@ let linesOFCode = 0;
 let clickPower = 1;
 let upgradeCost = 50;
 
-let interns = 0;
-let internsCost = 100;
+let intern = 0;
+let internCost = 100;
 
 function writeCode() 
 {
@@ -26,11 +26,11 @@ function buyKeyboard()
 
 function buyIntern()
 {
-    if(linesOFCode >= internsCost)
+    if(linesOFCode >= internCost)
     {
-        linesOFCode = linesOFCode - internsCost;
-        interns = interns + 1;
-        internsCost = internsCost * 1.5;
+        linesOFCode = linesOFCode - internCost;
+        intern = intern + 1;
+        internCost = internCost * 1.5;
         updateScreen();
     }
 }
@@ -41,14 +41,14 @@ function updateScreen()
     document.getElementById("power-display").innerText - clickPower;
     document.getElementById("cost-display").innerText - upgradeCost;
 
-    document.getElementById("intern-display").innerText = interns;
-    document.getElementById("intern-display-cost").innerText = internsCost;
+    document.getElementById("intern-display").innerText = intern;
+    document.getElementById("intern-display-cost").innerText = internCost;
 }
 
 setInterval(function() {
-    if(interns > 0)
+    if(intern > 0)
     {
-        linesOFCode = linesOFCode + interns;
+        linesOFCode = linesOFCode + intern;
         updateScreen();
     }
 },
