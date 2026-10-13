@@ -12,5 +12,23 @@ body {
     margin: 0 auto;
     padding: 30px;
     border-radius: 12px;
-    box-shadow: 0 8px 16px gray;
+    box-shadow: 0 8px 16px black;
+}
+
+#main-button {
+    font-size: 24px;
+    padding: 20px, 40px;
+    margin: 20px 0;
+    background-color: teal;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    font-weight: bold;
+}
+
+#shop {
+    margin-top: 30px;
+    background-color: dimgray;
+    padding: 20px;
+    border-radius: 8px;
 }
