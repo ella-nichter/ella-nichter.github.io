@@ -4,5 +4,5 @@ function levelUp()
 {
     currentLevel++;
     //currentLevel = currentLevel + 1;
-    document.getElementbyId("level").innerHTML = currentLevel;
+    document.getElementById("level").innerHTML = currentLevel;
 }
