@@ -10,6 +10,9 @@ let internCost = 100;
 let construction = 0;
 let constructionCost = 150;
 
+let robot = 0;
+let robotCost = 200;
+
 function writeCode() 
 {
     linesOfCode = linesOfCode + clickPower;
@@ -49,6 +52,18 @@ function buyConstruction()
         updateScreen();
     }
 }
+
+function buyRobot()
+{
+    if(linesOfCode >= robotCost)
+    {
+        linesOfCode = linesOfCode - robotCostCost;
+        robot = robot + 1;
+        robotCost = robotCost * 1.5;
+        updateScreen();
+    }
+}
+
 
 function updateScreen()
 {
