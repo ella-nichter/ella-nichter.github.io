@@ -7,6 +7,9 @@ let upgradeCost = 50;
 let interns = 0;
 let internCost = 100;
 
+let construction = 0;
+let constructionCost = 150;
+
 function writeCode() 
 {
     linesOfCode = linesOfCode + clickPower;
@@ -31,6 +34,18 @@ function buyIntern()
         linesOfCode = linesOfCode - internCost;
         interns = interns + 1;
         internCost = internCost * 1.5;
+        updateScreen();
+    }
+}
+
+
+function buyConstruction()
+{
+    if(linesOfCode >= internCost)
+    {
+        linesOfCode = linesOfCode - constructionCost;
+        construction = construction + 1;
+        constructionCost = constructionCost * 1.5;
         updateScreen();
     }
 }
