@@ -57,7 +57,7 @@ function buyRobot()
 {
     if(linesOfCode >= robotCost)
     {
-        linesOfCode = linesOfCode - robotCostCost;
+        linesOfCode = linesOfCode - robotCost;
         robot = robot + 1;
         robotCost = robotCost * 1.5;
         updateScreen();
