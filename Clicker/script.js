@@ -44,11 +44,12 @@ function buyIntern()
 
 function buyConstruction()
 {
-    if(linesOfCode >= internCost)
+    if (linesOfCode >= constructionCost)
     {
         linesOfCode = linesOfCode - constructionCost;
         construction = construction + 1;
         constructionCost = constructionCost * 1.5;
+
         updateScreen();
     }
 }
@@ -67,21 +68,28 @@ function buyRobot()
 
 function updateScreen()
 {
-    document.getElementById("score-display").innerText = linesOfCode + " lines of code";
+    document.getElementById("score-display").innerText =
+        linesOfCode + " lines of code";
 
     document.getElementById("power-display").innerText = clickPower;
     document.getElementById("cost-display").innerText = upgradeCost;
 
     document.getElementById("intern-display").innerText = interns;
-    document.getElementById("intern-display-cost").innerText = internCost;
+    document.getElementById("cost-intern-display").innerText = internCost;
+
+    document.getElementById("construction-display").innerText = construction;
+    document.getElementById("cost-construction-display").innerText =
+        constructionCost;
+
+    document.getElementById("robot-display").innerText = robot;
+    document.getElementById("cost-robot-display").innerText = robotCost;
 }
 
-setInterval(function() {
-    if(interns > 0)
+setInterval(function()
+{
+    if (interns > 0 || robot > 0)
     {
-        linesOfCode = linesOfCode + interns;
+        linesOfCode = linesOfCode + interns + robot;
         updateScreen();
     }
-}, 
-1000
-);
+}, 1000);
