@@ -24,10 +24,24 @@ function countdown()
 {
     timeLeft--; //timeLeft = timeLeft - 1;
     timeDisplay.innerText = timeLeft;
+
+    if(timeLeft <=0)
+    {
+        endGame();
+    }
 }
 
 function hitTarget()
 {
     score++;    //score = score + 1;
     scoreDisplay.innerText = score;
+}
+
+function endGame()
+{
+    clearInterval(timerId);
+    targetElement.style.display = "none";
+    startButton.disabled = false;
+
+    alert("*WHISTLE* You scored: " + score);
 }
