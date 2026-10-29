@@ -1,5 +1,5 @@
 function triggerBug1() {
-    let outputText = document.getElementByID("output1"); 
+    let outputText = document.getElementById("output1"); 
     outputText.innerText = "Code Fixed!";
     
     let btn = document.getElementById("btn1");
