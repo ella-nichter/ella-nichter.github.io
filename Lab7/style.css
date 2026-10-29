@@ -1,0 +1,63 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: lightgray;
+    color: black;
+    padding: 20px;
+}
+
+header {
+    background-color: darkred;
+    color: white;
+    padding: 20px;
+    text-align: center;
+    border-radius: 8px;
+    margin-bottom: 20px;
+}
+
+.grid-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 20px;
+}
+
+.card {
+    background-color: white;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 2px 2px 10px gray;
+    text-align: center;
+}
+
+.card h3 {
+    margin-top: 0;
+    color: darkred;
+}
+
+p {
+    font-weight: bold;
+    color: dimgray;
+    height: 20px; /* Keeps the card layout from jumping */
+}
+
+button {
+    background-color: black;
+    color: white;
+    padding: 10px 20px;
+    font-size: 16px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: bold;
+    width: 100%;
+}
+
+button:hover {
+    background-color: dimgray;
+}
+
+/* This triggers automatically when the JS successfully runs btn.disabled = true */
+button:disabled {
+    background-color: silver;
+    color: white;
+    cursor: not-allowed;
+}

@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>QA Testing: The Bug Hunt</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <header>
+        <h1>QA Testing: Find the 5 Bugs</h1>
+        <p>Open your Developer Console. Click each button to trigger an error. Fix the code so the button says "Done".</p>
+    </header>
+
+    <main class="grid-container">
+        
+        <div class="card">
+            <p id="output1">Waiting...</p>
+            <button id="btn1" onclick="triggerBug1()">Test Bug 1</button>
+        </div>
+
+        <div class="card">
+            <p id="output2">Waiting...</p>
+            <button id="btn2" onclick="triggerBug2()">Test Bug 2</button>
+        </div>
+
+        <div class="card">
+            <p id="output3">Waiting...</p>
+            <button id="btn3" onclick="triggerBug3()">Test Bug 3</button>
+        </div>
+
+        <div class="card">
+            <p id="output4">Waiting...</p>
+            <button id="btn4" onclick="triggerBug4()">Test Bug 4</button>
+        </div>
+
+        <div class="card">
+            <p id="output5">Waiting...</p>
+            <button id="btn5" onclick="TriggerBug5()">Test Bug 5</button>
+        </div>
+
+    </main>
+
+    <script src="script.js"></script>
+</body>
+</html>
