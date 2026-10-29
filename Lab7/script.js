@@ -29,7 +29,7 @@ function triggerBug4() {
     let studentName = "Cocky";
     let outputText = document.getElementById("output4");
     
-    outputText.innerText = studentName + "is here!"; 
+    outputText.innerText = studentName + " is here!"; 
     
     let btn = document.getElementById("btn4");
     btn.innerText = "Done";
