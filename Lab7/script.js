@@ -26,7 +26,7 @@ function triggerBug3() {
 }
 
 function triggerBug4() {
-    let studentName = "Cocky";
+    let studentName = document.getElementById("Cocky");
     let outputText = document.getElementById("output4");
     
     outputText.innerText = studentname + " is here!"; 
