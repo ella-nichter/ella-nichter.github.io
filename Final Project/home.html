@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>The Reading Nook</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <header>
+        <h1>The Reading Nook</h1>
+
+        <nav>
+            <a href="home.html">Home</a>
+            <a href="tbr.html">My TBR</a>
+            <a href="picker.html">Book Picker</a>
+            <a href="stats.html">Stats</a>
+        </nav>
+    </header>
+
+    <main>
+        <section id="welcome-section">
+            <h2>Welcome back! Ready to get lost in a good book?</h2>
+        </section>
+
+        <section id="currently-reading-section">
+            <h2>Currently Reading</h2>
+
+            <div id="current-book-card">
+                <div class="book-cover">
+                    <p>Book<br>Cover</p>
+                </div>
+
+                <div id="book-information">
+                    <h3 id="current-title">Book Title</h3>
+                    <p id="current-author">Author: Author Name</p>
+                    <p id="current-genre">Genre: Genre Name</p>
+
+                    <a href="tbr.html">
+                        <button id="start-new-button">Start New Book</button>
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <section id="yearly-goal-section">
+            <p>
+                <span id="books-read-display">0</span>
+                Books Read in 2026
+            </p>
+        </section>
+
+        <section id="quote-section">
+            <p id="book-quote">
+                “A reader lives a thousand lives before he dies.”
+            </p>
+
+            <button id="quote-button" onclick="changeQuote()">
+                Change Quote
+            </button>
+        </section>
+    </main>
+
+    <script src="script.js"></script>
+</body>
+</html>
