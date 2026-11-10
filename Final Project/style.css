@@ -220,3 +220,166 @@ main {
         height: 270px;
     }
 }
+
+/* MY TBR PAGE */
+
+#tbr-welcome-section {
+    margin-bottom: 30px;
+    text-align: center;
+}
+
+#tbr-welcome-section h2 {
+    margin-bottom: 8px;
+    color: var(--forest-green);
+    font-family: "DM Serif Display", Georgia, serif;
+    font-size: 2.8rem;
+    font-weight: normal;
+}
+
+#tbr-welcome-section p {
+    margin-top: 0;
+    color: var(--brown);
+    font-size: 1.05rem;
+}
+
+#add-book-section {
+    display: grid;
+    gap: 10px;
+    max-width: 700px;
+    margin: 0 auto 35px;
+    padding: 28px;
+    border: 2px solid #d7bc9c;
+    border-radius: 18px;
+    background-color: var(--light-cream);
+    box-shadow: 0 8px 18px rgba(74, 48, 36, 0.14);
+}
+
+#add-book-section h3 {
+    margin: 0 0 8px;
+    color: var(--rust);
+    font-family: "DM Serif Display", Georgia, serif;
+    font-size: 2rem;
+    font-weight: normal;
+    text-align: center;
+}
+
+#add-book-section label {
+    color: var(--forest-green);
+    font-weight: bold;
+}
+
+#add-book-section input {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #c8a984;
+    border-radius: 8px;
+    color: var(--brown);
+    background-color: #fffdf8;
+    font-family: "Quicksand", Arial, sans-serif;
+    font-size: 1rem;
+}
+
+#add-book-section input:focus {
+    outline: 2px solid var(--sage);
+}
+
+#add-book-button {
+    justify-self: center;
+    margin-top: 10px;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 25px;
+    color: var(--light-cream);
+    background-color: var(--forest-green);
+    cursor: pointer;
+    font-family: "Quicksand", Arial, sans-serif;
+    font-size: 1rem;
+    font-weight: bold;
+}
+
+#add-book-button:hover {
+    background-color: var(--brown);
+}
+
+#tbr-list-section {
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 28px;
+    border: 2px solid #d7bc9c;
+    border-radius: 18px;
+    background-color: var(--light-cream);
+    box-shadow: 0 8px 18px rgba(74, 48, 36, 0.14);
+}
+
+#tbr-list-heading {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 15px;
+    border-bottom: 2px solid #dcc6a6;
+}
+
+#tbr-list-heading h3 {
+    margin: 0 0 12px;
+    color: var(--rust);
+    font-family: "DM Serif Display", Georgia, serif;
+    font-size: 2rem;
+    font-weight: normal;
+}
+
+#tbr-list-heading p {
+    color: var(--forest-green);
+    font-weight: bold;
+}
+
+.book-list-labels {
+    display: grid;
+    grid-template-columns: 90px 2fr 2fr 1.5fr;
+    gap: 12px;
+    padding: 10px;
+    border-radius: 8px;
+    color: var(--light-cream);
+    background-color: var(--forest-green);
+    font-weight: bold;
+}
+
+.book-list-labels p {
+    margin: 0;
+}
+
+#tbr-list {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+.tbr-book {
+    display: grid;
+    grid-template-columns: 90px 2fr 2fr 1.5fr;
+    gap: 12px;
+    align-items: center;
+    padding: 16px 10px;
+    border-bottom: 1px solid #dcc6a6;
+    color: var(--brown);
+}
+
+.tbr-book input {
+    width: 20px;
+    height: 20px;
+    cursor: pointer;
+}
+
+@media (max-width: 700px) {
+    #tbr-list-heading {
+        display: block;
+    }
+
+    .book-list-labels {
+        display: none;
+    }
+
+    .tbr-book {
+        grid-template-columns: 35px 1fr;
+        gap: 8px;
+    }
+}
