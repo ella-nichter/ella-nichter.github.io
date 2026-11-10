@@ -1,0 +1,217 @@
+@import url("https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&family=Nunito+Sans:wght@400;600;700&display=swap");
+
+:root {
+    --cream: #f6f0e5;
+    --light-cream: #fffaf2;
+    --forest-green: #43533d;
+    --sage: #a9b29b;
+    --brown: #4b382b;
+    --gold: #c99c52;
+    --rust: #a8603b;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    color: var(--brown);
+    font-family: "Nunito Sans", Arial, sans-serif;
+    background-color: var(--cream);
+    background-image: radial-gradient(#ded2bf 1px, transparent 1px);
+    background-size: 22px 22px;
+}
+
+header {
+    padding: 22px 8%;
+    color: var(--light-cream);
+    background-color: var(--forest-green);
+    box-shadow: 0 3px 10px rgba(75, 56, 43, 0.2);
+}
+
+header h1 {
+    margin: 0;
+    font-family: "Cormorant Garamond", Georgia, serif;
+    font-size: 3.2rem;
+    letter-spacing: 1px;
+    text-align: center;
+}
+
+nav {
+    display: flex;
+    justify-content: center;
+    gap: 28px;
+    margin-top: 12px;
+}
+
+nav a {
+    color: var(--light-cream);
+    font-size: 1rem;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+nav a:hover {
+    color: #efd59f;
+    text-decoration: underline;
+}
+
+main {
+    width: 90%;
+    max-width: 1050px;
+    margin: 0 auto;
+    padding: 45px 0 60px;
+}
+
+#welcome-section {
+    margin-bottom: 35px;
+    text-align: center;
+}
+
+#welcome-section h2 {
+    margin: 0;
+    color: var(--forest-green);
+    font-family: "Cormorant Garamond", Georgia, serif;
+    font-size: 2.6rem;
+    line-height: 1;
+}
+
+#currently-reading-section {
+    padding: 30px;
+    border: 2px solid #d8c9af;
+    border-radius: 18px;
+    background-color: var(--light-cream);
+    box-shadow: 0 8px 18px rgba(75, 56, 43, 0.16);
+}
+
+#currently-reading-section h2 {
+    margin-top: 0;
+    color: var(--rust);
+    font-family: "Cormorant Garamond", Georgia, serif;
+    font-size: 2.2rem;
+    text-align: center;
+}
+
+#current-book-card {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 45px;
+}
+
+.book-cover {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 225px;
+    height: 310px;
+    border: 8px solid #e4d2af;
+    border-radius: 8px;
+    color: var(--light-cream);
+    background: linear-gradient(135deg, var(--forest-green), #6d7c5e);
+    box-shadow: 7px 8px 0 var(--brown);
+    text-align: center;
+}
+
+.book-cover p {
+    font-family: "Cormorant Garamond", Georgia, serif;
+    font-size: 2rem;
+    font-weight: bold;
+}
+
+#book-information {
+    min-width: 240px;
+}
+
+#current-title {
+    margin-bottom: 10px;
+    color: var(--forest-green);
+    font-family: "Cormorant Garamond", Georgia, serif;
+    font-size: 2.4rem;
+}
+
+#book-information p {
+    font-size: 1.05rem;
+    line-height: 1.5;
+}
+
+#start-new-button,
+#quote-button {
+    padding: 12px 18px;
+    border: none;
+    border-radius: 25px;
+    color: var(--light-cream);
+    background-color: var(--rust);
+    cursor: pointer;
+    font-family: "Nunito Sans", Arial, sans-serif;
+    font-size: 1rem;
+    font-weight: bold;
+    transition: background-color 0.2s, transform 0.2s;
+}
+
+#start-new-button:hover,
+#quote-button:hover {
+    background-color: var(--brown);
+    transform: translateY(-2px);
+}
+
+#yearly-goal-section {
+    width: fit-content;
+    margin: 35px auto;
+    padding: 18px 35px;
+    border: 2px solid var(--forest-green);
+    border-radius: 30px;
+    color: var(--forest-green);
+    background-color: #e8e4d2;
+    font-size: 1.2rem;
+    font-weight: bold;
+    text-align: center;
+}
+
+#books-read-display {
+    color: var(--rust);
+    font-family: "Cormorant Garamond", Georgia, serif;
+    font-size: 2.5rem;
+}
+
+#quote-section {
+    padding: 25px;
+    border-radius: 15px;
+    background-color: #ebe0c9;
+    text-align: center;
+}
+
+#book-quote {
+    margin-top: 0;
+    color: var(--brown);
+    font-family: "Cormorant Garamond", Georgia, serif;
+    font-size: 1.6rem;
+    font-style: italic;
+}
+
+@media (max-width: 700px) {
+    header h1 {
+        font-size: 2.6rem;
+    }
+
+    nav {
+        gap: 14px;
+        flex-wrap: wrap;
+    }
+
+    #current-book-card {
+        flex-direction: column;
+        gap: 25px;
+        text-align: center;
+    }
+
+    #currently-reading-section {
+        padding: 22px;
+    }
+
+    .book-cover {
+        width: 190px;
+        height: 270px;
+    }
+}
