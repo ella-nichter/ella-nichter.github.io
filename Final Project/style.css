@@ -1,13 +1,13 @@
-@import url("https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&family=Nunito+Sans:wght@400;600;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=Quicksand:wght@400;500;600;700&display=swap");
 
 :root {
-    --cream: #f6f0e5;
-    --light-cream: #fffaf2;
-    --forest-green: #43533d;
-    --sage: #a9b29b;
-    --brown: #4b382b;
-    --gold: #c99c52;
-    --rust: #a8603b;
+    --cream: #f3e4cf;
+    --light-cream: #fff8ed;
+    --forest-green: #5b624d;
+    --sage: #a6ad8a;
+    --brown: #4a3024;
+    --gold: #d4a373;
+    --rust: #b86f52;
 }
 
 * {
@@ -17,9 +17,9 @@
 body {
     margin: 0;
     color: var(--brown);
-    font-family: "Nunito Sans", Arial, sans-serif;
+    font-family: "Quicksand", Arial, sans-serif;
     background-color: var(--cream);
-    background-image: radial-gradient(#ded2bf 1px, transparent 1px);
+    background-image: radial-gradient(#ddc9ad 1px, transparent 1px);
     background-size: 22px 22px;
 }
 
@@ -27,13 +27,14 @@ header {
     padding: 22px 8%;
     color: var(--light-cream);
     background-color: var(--forest-green);
-    box-shadow: 0 3px 10px rgba(75, 56, 43, 0.2);
+    box-shadow: 0 3px 10px rgba(74, 48, 36, 0.25);
 }
 
 header h1 {
     margin: 0;
-    font-family: "Cormorant Garamond", Georgia, serif;
-    font-size: 3.2rem;
+    font-family: "DM Serif Display", Georgia, serif;
+    font-size: 3.4rem;
+    font-weight: normal;
     letter-spacing: 1px;
     text-align: center;
 }
@@ -53,7 +54,7 @@ nav a {
 }
 
 nav a:hover {
-    color: #efd59f;
+    color: #f4d49a;
     text-decoration: underline;
 }
 
@@ -72,24 +73,26 @@ main {
 #welcome-section h2 {
     margin: 0;
     color: var(--forest-green);
-    font-family: "Cormorant Garamond", Georgia, serif;
-    font-size: 2.6rem;
+    font-family: "DM Serif Display", Georgia, serif;
+    font-size: 2.8rem;
+    font-weight: normal;
     line-height: 1;
 }
 
 #currently-reading-section {
     padding: 30px;
-    border: 2px solid #d8c9af;
+    border: 2px solid #d7bc9c;
     border-radius: 18px;
     background-color: var(--light-cream);
-    box-shadow: 0 8px 18px rgba(75, 56, 43, 0.16);
+    box-shadow: 0 8px 18px rgba(74, 48, 36, 0.18);
 }
 
 #currently-reading-section h2 {
     margin-top: 0;
     color: var(--rust);
-    font-family: "Cormorant Garamond", Georgia, serif;
-    font-size: 2.2rem;
+    font-family: "DM Serif Display", Georgia, serif;
+    font-size: 2.4rem;
+    font-weight: normal;
     text-align: center;
 }
 
@@ -106,18 +109,17 @@ main {
     justify-content: center;
     width: 225px;
     height: 310px;
-    border: 8px solid #e4d2af;
+    border: 8px solid #e4c79e;
     border-radius: 8px;
     color: var(--light-cream);
-    background: linear-gradient(135deg, var(--forest-green), #6d7c5e);
+    background: linear-gradient(135deg, #6c7356, #a97855);
     box-shadow: 7px 8px 0 var(--brown);
     text-align: center;
 }
 
 .book-cover p {
-    font-family: "Cormorant Garamond", Georgia, serif;
+    font-family: "DM Serif Display", Georgia, serif;
     font-size: 2rem;
-    font-weight: bold;
 }
 
 #book-information {
@@ -127,8 +129,9 @@ main {
 #current-title {
     margin-bottom: 10px;
     color: var(--forest-green);
-    font-family: "Cormorant Garamond", Georgia, serif;
-    font-size: 2.4rem;
+    font-family: "DM Serif Display", Georgia, serif;
+    font-size: 2.5rem;
+    font-weight: normal;
 }
 
 #book-information p {
@@ -144,7 +147,7 @@ main {
     color: var(--light-cream);
     background-color: var(--rust);
     cursor: pointer;
-    font-family: "Nunito Sans", Arial, sans-serif;
+    font-family: "Quicksand", Arial, sans-serif;
     font-size: 1rem;
     font-weight: bold;
     transition: background-color 0.2s, transform 0.2s;
@@ -163,7 +166,7 @@ main {
     border: 2px solid var(--forest-green);
     border-radius: 30px;
     color: var(--forest-green);
-    background-color: #e8e4d2;
+    background-color: #ead8bb;
     font-size: 1.2rem;
     font-weight: bold;
     text-align: center;
@@ -171,22 +174,24 @@ main {
 
 #books-read-display {
     color: var(--rust);
-    font-family: "Cormorant Garamond", Georgia, serif;
-    font-size: 2.5rem;
+    font-family: "DM Serif Display", Georgia, serif;
+    font-size: 2.6rem;
+    font-weight: normal;
 }
 
 #quote-section {
     padding: 25px;
+    border: 1px solid #d8bc9b;
     border-radius: 15px;
-    background-color: #ebe0c9;
+    background-color: #ead8c2;
     text-align: center;
 }
 
 #book-quote {
     margin-top: 0;
     color: var(--brown);
-    font-family: "Cormorant Garamond", Georgia, serif;
-    font-size: 1.6rem;
+    font-family: "DM Serif Display", Georgia, serif;
+    font-size: 1.7rem;
     font-style: italic;
 }
 
