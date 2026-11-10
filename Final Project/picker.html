@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Book Picker | The Reading Nook</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <header>
+        <h1>The Reading Nook</h1>
+
+        <nav>
+            <a href="home.html">Home</a>
+            <a href="tbr.html">My TBR</a>
+            <a href="picker.html">Book Picker</a>
+            <a href="stats.html">Stats</a>
+        </nav>
+    </header>
+
+    <main>
+        <section id="picker-welcome-section">
+            <h2>What are you in the mood to read today?</h2>
+            <p>Choose a genre and a vibe, then let the nook choose your next story.</p>
+        </section>
+
+        <section id="genre-section">
+            <h3>Choose a Genre</h3>
+
+            <div class="button-group">
+                <button onclick="chooseGenre('Romance')">Romance</button>
+                <button onclick="chooseGenre('Thriller')">Thriller</button>
+                <button onclick="chooseGenre('Fantasy')">Fantasy</button>
+                <button onclick="chooseGenre('Mystery')">Mystery</button>
+                <button onclick="chooseGenre('Science Fiction')">Sci-Fi</button>
+                <button onclick="chooseGenre('Romantasy')">Contemporary</button>
+            </div>
+        </section>
+
+        <section id="vibe-section">
+            <h3>Choose a Vibe</h3>
+
+            <div class="button-group">
+                <button onclick="chooseVibe('Cozy')">Cozy</button>
+                <button onclick="chooseVibe('Classic')">Classic</button>
+                <button onclick="chooseVibe('Fall in Love')">Fall in Love</button>
+                <button onclick="chooseVibe('High Stakes')">High Stakes</button>
+                <button onclick="chooseVibe('New Worlds')">New Worlds</button>
+
+            </div>
+        </section>
+
+        <button id="generate-button" onclick="generateRecommendation()">
+            Generate Recommendation
+        </button>
+
+        <section id="recommendation-section">
+            <h3>Your Recommendation</h3>
+
+            <div id="recommendation-card">
+                <div class="recommendation-cover">
+                    <p>Book<br>Cover</p>
+                </div>
+
+                <div id="recommendation-information">
+                    <h4 id="recommendation-title">Choose a genre and vibe</h4>
+                    <p id="recommendation-author">Your recommendation will appear here.</p>
+                    <p id="recommendation-genre"></p>
+                </div>
+            </div>
+
+            <button id="new-recommendation-button" onclick="generateRecommendation()">
+                New Recommendation
+            </button>
+        </section>
+    </main>
+
+    <script src="script.js"></script>
+</body>
+</html>
