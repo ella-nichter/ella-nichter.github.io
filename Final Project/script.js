@@ -178,12 +178,12 @@ function generateRecommendation() {
 
         Fantasy: [
             {
-                title: "Fourth Wing",
-                author: "Rebecca Yarros"
-            },
-            {
                 title: "The Night Circus",
                 author: "Erin Morgenstern"
+            },
+            {
+                title: "The Priory of the Orange Tree",
+                author: "Samantha Shannon"
             }
         ],
 
@@ -209,14 +209,14 @@ function generateRecommendation() {
             }
         ],
 
-        Contemporary: [
+        Romantasy: [
             {
-                title: "Tomorrow, and Tomorrow, and Tomorrow",
-                author: "Gabrielle Zevin"
+                title: "Fourth Wing",
+                author: "Rebecca Yarros"
             },
             {
-                title: "Normal People",
-                author: "Sally Rooney"
+                title: "A Court of Thorns and Roses",
+                author: "Sarah J. Maas"
             }
         ]
     };
@@ -230,7 +230,8 @@ function generateRecommendation() {
     recommendationTitle.innerText = chosenBook.title;
 
     recommendationAuthor.innerText =
-        "By " + chosenBook.author + " — perfect for a " + selectedVibe.toLowerCase() + " reading mood.";
+        "By " + chosenBook.author +
+        " — perfect for a " + selectedVibe.toLowerCase() + " reading mood.";
 
     recommendationGenre.innerText =
         selectedGenre + " recommendation";
