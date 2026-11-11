@@ -108,11 +108,14 @@ function updateCurrentBook() {
     const currentTitle = document.getElementById("current-title");
     const currentAuthor = document.getElementById("current-author");
     const currentGenre = document.getElementById("current-genre");
+    const currentBookCoverText = document.getElementById("current-book-cover-text");
+
 
     if (currentTitle !== null) {
-        currentTitle.innerText = currentBook.title;
-        currentAuthor.innerText = "Author: " + currentBook.author;
-        currentGenre.innerText = "Genre: " + currentBook.genre;
+    currentTitle.innerText = currentBook.title;
+    currentAuthor.innerText = "Author: " + currentBook.author;
+    currentGenre.innerText = "Genre: " + currentBook.genre;
+    currentBookCoverText.innerText = currentBook.title;
     }
 }
 
@@ -306,6 +309,7 @@ function generateRecommendation() {
 
     recommendationCover.src = chosenBook.cover;
     recommendationCover.alt = "Cover of " + chosenBook.title;
+  
 }
 
 /* STATS PAGE */
