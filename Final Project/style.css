@@ -623,3 +623,33 @@ main {
         grid-template-columns: 85px 1fr 30px;
     }
 }
+
+/* HOME PAGE: KEEP COVER AND BOOK DETAILS SIDE BY SIDE */
+
+#current-book-card {
+    display: grid;
+    grid-template-columns: 225px minmax(0, 1fr);
+    align-items: center;
+    gap: 45px;
+}
+
+#book-information {
+    width: 100%;
+}
+
+@media (max-width: 700px) {
+    #current-book-card {
+        grid-template-columns: 1fr;
+        text-align: center;
+    }
+}
+
+/* KEEP RECOMMENDATION COVER BLANK UNTIL A BOOK IS GENERATED */
+
+.recommendation-cover {
+    background: #e9dfca;
+}
+
+#recommendation-cover-image {
+    display: none;
+}

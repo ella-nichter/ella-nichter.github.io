@@ -308,6 +308,7 @@ function generateRecommendation() {
 
     recommendationCover.src = chosenBook.cover;
     recommendationCover.alt = "Cover of " + chosenBook.title;
+    recommendationCover.style.display = "block";
   
 }
 
