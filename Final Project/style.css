@@ -383,3 +383,166 @@ main {
         gap: 8px;
     }
 }
+
+/* BOOK PICKER PAGE */
+
+#picker-welcome-section {
+    margin-bottom: 35px;
+    text-align: center;
+}
+
+#picker-welcome-section h2 {
+    margin-bottom: 8px;
+    color: var(--forest-green);
+    font-family: "DM Serif Display", Georgia, serif;
+    font-size: 2.8rem;
+    font-weight: normal;
+}
+
+#picker-welcome-section p {
+    margin-top: 0;
+    color: var(--brown);
+    font-size: 1.05rem;
+}
+
+#genre-section,
+#vibe-section {
+    max-width: 850px;
+    margin: 22px auto;
+    padding: 25px;
+    border: 2px solid #d7bc9c;
+    border-radius: 18px;
+    background-color: var(--light-cream);
+    box-shadow: 0 6px 15px rgba(74, 48, 36, 0.12);
+    text-align: center;
+}
+
+#genre-section h3,
+#vibe-section h3,
+#recommendation-section h3 {
+    margin-top: 0;
+    color: var(--rust);
+    font-family: "DM Serif Display", Georgia, serif;
+    font-size: 2rem;
+    font-weight: normal;
+}
+
+.button-group {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 12px;
+}
+
+.button-group button {
+    padding: 11px 17px;
+    border: 2px solid var(--forest-green);
+    border-radius: 22px;
+    color: var(--forest-green);
+    background-color: #f8eddc;
+    cursor: pointer;
+    font-family: "Quicksand", Arial, sans-serif;
+    font-size: 1rem;
+    font-weight: bold;
+}
+
+.button-group button:hover {
+    color: var(--light-cream);
+    background-color: var(--forest-green);
+}
+
+#generate-button,
+#new-recommendation-button {
+    display: block;
+    margin: 28px auto;
+    padding: 14px 23px;
+    border: none;
+    border-radius: 25px;
+    color: var(--light-cream);
+    background-color: var(--rust);
+    cursor: pointer;
+    font-family: "Quicksand", Arial, sans-serif;
+    font-size: 1rem;
+    font-weight: bold;
+}
+
+#generate-button:hover,
+#new-recommendation-button:hover {
+    background-color: var(--brown);
+    transform: translateY(-2px);
+}
+
+#recommendation-section {
+    max-width: 850px;
+    margin: 35px auto;
+    padding: 30px;
+    border: 2px solid #d7bc9c;
+    border-radius: 18px;
+    background-color: var(--light-cream);
+    box-shadow: 0 8px 18px rgba(74, 48, 36, 0.16);
+    text-align: center;
+}
+
+#recommendation-card {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 40px;
+    min-height: 260px;
+}
+
+.recommendation-cover {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 180px;
+    height: 245px;
+    border: 7px solid #e4c79e;
+    border-radius: 8px;
+    color: var(--light-cream);
+    background: linear-gradient(135deg, #a97855, #6c7356);
+    box-shadow: 6px 7px 0 var(--brown);
+}
+
+.recommendation-cover p {
+    font-family: "DM Serif Display", Georgia, serif;
+    font-size: 1.7rem;
+}
+
+#recommendation-information {
+    max-width: 320px;
+    text-align: left;
+}
+
+#recommendation-title {
+    margin-bottom: 10px;
+    color: var(--forest-green);
+    font-family: "DM Serif Display", Georgia, serif;
+    font-size: 2.3rem;
+    font-weight: normal;
+}
+
+#recommendation-information p {
+    font-size: 1.05rem;
+    line-height: 1.5;
+}
+
+#new-recommendation-button {
+    margin-bottom: 0;
+}
+
+@media (max-width: 700px) {
+    #recommendation-card {
+        flex-direction: column;
+        gap: 25px;
+    }
+
+    #recommendation-information {
+        text-align: center;
+    }
+
+    .recommendation-cover {
+        width: 160px;
+        height: 220px;
+    }
+}
