@@ -558,3 +558,166 @@ main {
     color: var(--light-cream);
     background-color: var(--forest-green);
 }
+
+/* STATS PAGE */
+
+#stats-welcome-section {
+    margin-bottom: 35px;
+    text-align: center;
+}
+
+#stats-welcome-section h2 {
+    margin-bottom: 8px;
+    color: var(--forest-green);
+    font-family: "DM Serif Display", Georgia, serif;
+    font-size: 2.8rem;
+    font-weight: normal;
+}
+
+#stats-welcome-section p {
+    margin-top: 0;
+    font-size: 1.05rem;
+}
+
+#stats-summary-section {
+    display: flex;
+    justify-content: center;
+    gap: 25px;
+    margin-bottom: 30px;
+}
+
+.stat-card {
+    width: 280px;
+    padding: 25px;
+    border: 2px solid #d7bc9c;
+    border-radius: 18px;
+    background-color: var(--light-cream);
+    box-shadow: 0 6px 15px rgba(74, 48, 36, 0.14);
+    text-align: center;
+}
+
+.stat-label {
+    margin-top: 0;
+    color: var(--forest-green);
+    font-weight: bold;
+}
+
+.stat-number {
+    margin: 10px 0 0;
+    color: var(--rust);
+    font-family: "DM Serif Display", Georgia, serif;
+    font-size: 4rem;
+}
+
+.stat-word {
+    margin: 18px 0 0;
+    color: var(--rust);
+    font-family: "DM Serif Display", Georgia, serif;
+    font-size: 2rem;
+}
+
+#genre-chart-section,
+#recently-finished-section {
+    max-width: 850px;
+    margin: 30px auto;
+    padding: 28px;
+    border: 2px solid #d7bc9c;
+    border-radius: 18px;
+    background-color: var(--light-cream);
+    box-shadow: 0 6px 15px rgba(74, 48, 36, 0.14);
+}
+
+#genre-chart-section h3,
+#recently-finished-section h3 {
+    margin-top: 0;
+    color: var(--rust);
+    font-family: "DM Serif Display", Georgia, serif;
+    font-size: 2rem;
+    font-weight: normal;
+    text-align: center;
+}
+
+#genre-chart-message,
+#finished-books-message {
+    color: var(--brown);
+    text-align: center;
+}
+
+.genre-bar-row {
+    display: grid;
+    grid-template-columns: 120px 1fr 40px;
+    align-items: center;
+    gap: 12px;
+    margin: 14px 0;
+}
+
+.genre-bar-row p {
+    margin: 0;
+    font-weight: bold;
+}
+
+.genre-bar-background {
+    overflow: hidden;
+    height: 24px;
+    border-radius: 15px;
+    background-color: #ead8bb;
+}
+
+.genre-bar-fill {
+    height: 100%;
+    border-radius: 15px;
+    background-color: var(--sage);
+}
+
+#finished-books-list {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+.finished-book {
+    padding: 15px;
+    border-bottom: 1px solid #dcc6a6;
+}
+
+.finished-book:last-child {
+    border-bottom: none;
+}
+
+.finished-book-title {
+    margin: 0 0 5px;
+    color: var(--forest-green);
+    font-family: "DM Serif Display", Georgia, serif;
+    font-size: 1.4rem;
+}
+
+.finished-book-details {
+    margin: 0;
+}
+
+#stats-quote-section {
+    margin-top: 35px;
+    padding: 22px;
+    border: 1px solid #d8bc9b;
+    border-radius: 15px;
+    background-color: #ead8c2;
+    text-align: center;
+}
+
+#stats-quote-section p {
+    margin: 0;
+    font-family: "DM Serif Display", Georgia, serif;
+    font-size: 1.5rem;
+    font-style: italic;
+}
+
+@media (max-width: 700px) {
+    #stats-summary-section {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .genre-bar-row {
+        grid-template-columns: 85px 1fr 30px;
+    }
+}
