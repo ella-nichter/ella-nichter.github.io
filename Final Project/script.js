@@ -203,6 +203,7 @@ function generateRecommendation() {
     const recommendationTitle = document.getElementById("recommendation-title");
     const recommendationAuthor = document.getElementById("recommendation-author");
     const recommendationGenre = document.getElementById("recommendation-genre");
+    const recommendationCover = document.getElementById("recommendation-cover-image");
 
     if (selectedGenre === "" || selectedVibe === "") {
         recommendationTitle.innerText = "Choose a genre and a vibe first!";
@@ -213,33 +214,81 @@ function generateRecommendation() {
 
     const bookRecommendations = {
         Romance: [
-            { title: "Book Lovers", author: "Emily Henry" },
-            { title: "The Seven Husbands of Evelyn Hugo", author: "Taylor Jenkins Reid" }
+            {
+                title: "Book Lovers",
+                author: "Emily Henry",
+                cover: "https://covers.openlibrary.org/b/isbn/9780593334836-L.jpg"
+            },
+            {
+                title: "The Seven Husbands of Evelyn Hugo",
+                author: "Taylor Jenkins Reid",
+                cover: "https://covers.openlibrary.org/b/isbn/9781501139239-L.jpg"
+            }
         ],
 
         Thriller: [
-            { title: "The Silent Patient", author: "Alex Michaelides" },
-            { title: "The Housemaid", author: "Freida McFadden" }
+            {
+                title: "The Silent Patient",
+                author: "Alex Michaelides",
+                cover: "https://covers.openlibrary.org/b/isbn/9781250301697-L.jpg"
+            },
+            {
+                title: "The Housemaid",
+                author: "Freida McFadden",
+                cover: "https://covers.openlibrary.org/b/isbn/9781538742570-L.jpg"
+            }
         ],
 
         Fantasy: [
-            { title: "The Night Circus", author: "Erin Morgenstern" },
-            { title: "The Priory of the Orange Tree", author: "Samantha Shannon" }
+            {
+                title: "The Night Circus",
+                author: "Erin Morgenstern",
+                cover: "https://covers.openlibrary.org/b/isbn/9780385534635-L.jpg"
+            },
+            {
+                title: "The Priory of the Orange Tree",
+                author: "Samantha Shannon",
+                cover: "https://covers.openlibrary.org/b/isbn/9781635570298-L.jpg"
+            }
         ],
 
         Mystery: [
-            { title: "A Good Girl's Guide to Murder", author: "Holly Jackson" },
-            { title: "The Thursday Murder Club", author: "Richard Osman" }
+            {
+                title: "A Good Girl's Guide to Murder",
+                author: "Holly Jackson",
+                cover: "https://covers.openlibrary.org/b/isbn/9781984896393-L.jpg"
+            },
+            {
+                title: "The Thursday Murder Club",
+                author: "Richard Osman",
+                cover: "https://covers.openlibrary.org/b/isbn/9781984880986-L.jpg"
+            }
         ],
 
         "Science Fiction": [
-            { title: "Dark Matter", author: "Blake Crouch" },
-            { title: "The Martian", author: "Andy Weir" }
+            {
+                title: "Dark Matter",
+                author: "Blake Crouch",
+                cover: "https://covers.openlibrary.org/b/isbn/9781101904220-L.jpg"
+            },
+            {
+                title: "The Martian",
+                author: "Andy Weir",
+                cover: "https://covers.openlibrary.org/b/isbn/9780553418026-L.jpg"
+            }
         ],
 
         Romantasy: [
-            { title: "Fourth Wing", author: "Rebecca Yarros" },
-            { title: "A Court of Thorns and Roses", author: "Sarah J. Maas" }
+            {
+                title: "Fourth Wing",
+                author: "Rebecca Yarros",
+                cover: "https://covers.openlibrary.org/b/isbn/9781649374042-L.jpg"
+            },
+            {
+                title: "A Court of Thorns and Roses",
+                author: "Sarah J. Maas",
+                cover: "https://covers.openlibrary.org/b/isbn/9781635575552-L.jpg"
+            }
         ]
     };
 
@@ -254,8 +303,10 @@ function generateRecommendation() {
         " — perfect for a " + selectedVibe.toLowerCase() + " reading mood.";
 
     recommendationGenre.innerText = selectedGenre + " recommendation";
-}
 
+    recommendationCover.src = chosenBook.cover;
+    recommendationCover.alt = "Cover of " + chosenBook.title;
+}
 
 /* STATS PAGE */
 
