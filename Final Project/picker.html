@@ -24,7 +24,7 @@
     <main>
         <section id="picker-welcome-section">
             <h2>What are you in the mood to read today?</h2>
-            <p>Choose a genre and a vibe, then let the picker choose your next story.</p>
+            <p>Choose a genre and a vibe, then let the nook choose your next story.</p>
         </section>
 
         <section id="genre-section">
@@ -38,6 +38,7 @@
                 <button class="genre-button" onclick="chooseGenre('Science Fiction', this)">Sci-Fi</button>
                 <button class="genre-button" onclick="chooseGenre('Romantasy', this)">Romantasy</button>
             </div>
+        </section>
 
         <section id="vibe-section">
             <h3>Choose a Vibe</h3>
@@ -58,13 +59,14 @@
         <section id="recommendation-section">
             <h3>Your Recommendation</h3>
 
-            <div class="recommendation-cover">
-                <img
-                    id="recommendation-cover-image"
-                    src="https://covers.openlibrary.org/b/isbn/9780593334836-L.jpg"
-                    alt="Book recommendation cover"
-                >
-            </div>
+            <div id="recommendation-card">
+                <div class="recommendation-cover">
+                    <img
+                        id="recommendation-cover-image"
+                        src="https://covers.openlibrary.org/b/isbn/9780593334836-L.jpg"
+                        alt="Book recommendation cover"
+                    >
+                </div>
 
                 <div id="recommendation-information">
                     <h4 id="recommendation-title">Choose a genre and vibe</h4>
@@ -76,7 +78,6 @@
             <button id="new-recommendation-button" onclick="generateRecommendation()">
                 New Recommendation
             </button>
-            <button class="genre-button" onclick="chooseGenre('Romance', this)">Romance</button>
         </section>
     </main>
 
