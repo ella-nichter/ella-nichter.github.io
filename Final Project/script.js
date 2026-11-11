@@ -118,3 +118,120 @@ function updateBooksRead() {
 
 renderTBR();
 updateBooksRead();
+
+let selectedGenre = "";
+let selectedVibe = "";
+
+
+function chooseGenre(genre) {
+    selectedGenre = genre;
+
+    const recommendationGenre = document.getElementById("recommendation-genre");
+
+    recommendationGenre.innerText = "Genre selected: " + selectedGenre;
+}
+
+
+function chooseVibe(vibe) {
+    selectedVibe = vibe;
+
+    const recommendationAuthor = document.getElementById("recommendation-author");
+
+    recommendationAuthor.innerText = "Vibe selected: " + selectedVibe;
+}
+
+
+function generateRecommendation() {
+    const recommendationTitle = document.getElementById("recommendation-title");
+    const recommendationAuthor = document.getElementById("recommendation-author");
+    const recommendationGenre = document.getElementById("recommendation-genre");
+
+    if (selectedGenre === "" || selectedVibe === "") {
+        recommendationTitle.innerText = "Choose a genre and a vibe first!";
+        recommendationAuthor.innerText = "";
+        recommendationGenre.innerText = "";
+        return;
+    }
+
+    const bookRecommendations = {
+        Romance: [
+            {
+                title: "Book Lovers",
+                author: "Emily Henry"
+            },
+            {
+                title: "The Seven Husbands of Evelyn Hugo",
+                author: "Taylor Jenkins Reid"
+            }
+        ],
+
+        Thriller: [
+            {
+                title: "The Silent Patient",
+                author: "Alex Michaelides"
+            },
+            {
+                title: "The Housemaid",
+                author: "Freida McFadden"
+            }
+        ],
+
+        Fantasy: [
+            {
+                title: "Fourth Wing",
+                author: "Rebecca Yarros"
+            },
+            {
+                title: "The Night Circus",
+                author: "Erin Morgenstern"
+            }
+        ],
+
+        Mystery: [
+            {
+                title: "A Good Girl's Guide to Murder",
+                author: "Holly Jackson"
+            },
+            {
+                title: "The Thursday Murder Club",
+                author: "Richard Osman"
+            }
+        ],
+
+        "Science Fiction": [
+            {
+                title: "Dark Matter",
+                author: "Blake Crouch"
+            },
+            {
+                title: "The Martian",
+                author: "Andy Weir"
+            }
+        ],
+
+        Contemporary: [
+            {
+                title: "Tomorrow, and Tomorrow, and Tomorrow",
+                author: "Gabrielle Zevin"
+            },
+            {
+                title: "Normal People",
+                author: "Sally Rooney"
+            }
+        ]
+    };
+
+    const possibleBooks = bookRecommendations[selectedGenre];
+
+    const randomNumber = Math.floor(Math.random() * possibleBooks.length);
+
+    const chosenBook = possibleBooks[randomNumber];
+
+    recommendationTitle.innerText = chosenBook.title;
+
+    recommendationAuthor.innerText =
+        "By " + chosenBook.author + " — perfect for a " + selectedVibe.toLowerCase() + " reading mood.";
+
+    recommendationGenre.innerText =
+        selectedGenre + " recommendation";
+}
