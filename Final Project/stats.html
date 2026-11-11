@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Stats | The Reading Nook</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <header>
+        <h1>The Reading Nook</h1>
+
+        <nav>
+            <a href="home.html">Home</a>
+            <a href="tbr.html">My TBR</a>
+            <a href="picker.html">Book Picker</a>
+            <a href="stats.html">Stats</a>
+        </nav>
+    </header>
+
+    <main>
+        <section id="stats-welcome-section">
+            <h2>My Reading Stats</h2>
+            <p>A little look at all the stories you have finished this year.</p>
+        </section>
+
+        <section id="stats-summary-section">
+            <div class="stat-card">
+                <p class="stat-label">Books Read in 2026</p>
+                <p class="stat-number" id="stats-books-read">0</p>
+            </div>
+
+            <div class="stat-card">
+                <p class="stat-label">Most Read Genre</p>
+                <p class="stat-word" id="favorite-genre-display">No books yet</p>
+            </div>
+        </section>
+
+        <section id="genre-chart-section">
+            <h3>Books by Genre</h3>
+
+            <div id="genre-chart">
+                <p id="genre-chart-message">
+                    Finish a book from your TBR to see your genre chart!
+                </p>
+            </div>
+        </section>
+
+        <section id="recently-finished-section">
+            <h3>Recently Finished</h3>
+
+            <ul id="finished-books-list">
+                <li id="finished-books-message">
+                    Your finished books will appear here.
+                </li>
+            </ul>
+        </section>
+
+        <section id="stats-quote-section">
+            <p>“Once you have read a book you care about, some part of it is always with you.”</p>
+        </section>
+    </main>
+
+    <script src="script.js"></script>
+</body>
+</html>
