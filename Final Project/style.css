@@ -546,3 +546,15 @@ main {
         height: 220px;
     }
 }
+
+.genre-button.selected-genre {
+    border-color: var(--rust);
+    color: var(--light-cream);
+    background-color: var(--rust);
+}
+
+.vibe-button.selected-vibe {
+    border-color: var(--forest-green);
+    color: var(--light-cream);
+    background-color: var(--forest-green);
+}

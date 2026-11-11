@@ -123,8 +123,16 @@ let selectedGenre = "";
 let selectedVibe = "";
 
 
-function chooseGenre(genre) {
+function chooseGenre(genre, button) {
     selectedGenre = genre;
+
+    const genreButtons = document.querySelectorAll(".genre-button");
+
+    for (let i = 0; i < genreButtons.length; i++) {
+        genreButtons[i].classList.remove("selected-genre");
+    }
+
+    button.classList.add("selected-genre");
 
     const recommendationGenre = document.getElementById("recommendation-genre");
 
@@ -132,8 +140,16 @@ function chooseGenre(genre) {
 }
 
 
-function chooseVibe(vibe) {
+function chooseVibe(vibe, button) {
     selectedVibe = vibe;
+
+    const vibeButtons = document.querySelectorAll(".vibe-button");
+
+    for (let i = 0; i < vibeButtons.length; i++) {
+        vibeButtons[i].classList.remove("selected-vibe");
+    }
+
+    button.classList.add("selected-vibe");
 
     const recommendationAuthor = document.getElementById("recommendation-author");
 

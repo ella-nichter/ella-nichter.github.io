@@ -24,32 +24,30 @@
     <main>
         <section id="picker-welcome-section">
             <h2>What are you in the mood to read today?</h2>
-            <p>Choose a genre and a vibe, then let the nook choose your next story.</p>
+            <p>Choose a genre and a vibe, then let the picker choose your next story.</p>
         </section>
 
         <section id="genre-section">
             <h3>Choose a Genre</h3>
 
             <div class="button-group">
-                <button onclick="chooseGenre('Romance')">Romance</button>
-                <button onclick="chooseGenre('Thriller')">Thriller</button>
-                <button onclick="chooseGenre('Fantasy')">Fantasy</button>
-                <button onclick="chooseGenre('Mystery')">Mystery</button>
-                <button onclick="chooseGenre('Science Fiction')">Sci-Fi</button>
-                <button onclick="chooseGenre('Romantasy')">Contemporary</button>
+                <button class="genre-button" onclick="chooseGenre('Romance', this)">Romance</button>
+                <button class="genre-button" onclick="chooseGenre('Thriller', this)">Thriller</button>
+                <button class="genre-button" onclick="chooseGenre('Fantasy', this)">Fantasy</button>
+                <button class="genre-button" onclick="chooseGenre('Mystery', this)">Mystery</button>
+                <button class="genre-button" onclick="chooseGenre('Science Fiction', this)">Sci-Fi</button>
+                <button class="genre-button" onclick="chooseGenre('Romantasy', this)">Romantasy</button>
             </div>
-        </section>
 
         <section id="vibe-section">
             <h3>Choose a Vibe</h3>
 
             <div class="button-group">
-                <button onclick="chooseVibe('Cozy')">Cozy</button>
-                <button onclick="chooseVibe('Classic')">Classic</button>
-                <button onclick="chooseVibe('Fall in Love')">Fall in Love</button>
-                <button onclick="chooseVibe('High Stakes')">High Stakes</button>
-                <button onclick="chooseVibe('New Worlds')">New Worlds</button>
-
+                <button class="vibe-button" onclick="chooseVibe('Cozy', this)">Cozy</button>
+                <button class="vibe-button" onclick="chooseVibe('Classic', this)">Classic</button>
+                <button class="vibe-button" onclick="chooseVibe('Fall in Love', this)">Fall in Love</button>
+                <button class="vibe-button" onclick="chooseVibe('High Stakes', this)">High Stakes</button>
+                <button class="vibe-button" onclick="chooseVibe('New Worlds', this)">New Worlds</button>
             </div>
         </section>
 
