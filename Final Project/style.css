@@ -721,3 +721,45 @@ main {
         grid-template-columns: 85px 1fr 30px;
     }
 }
+
+#new-book-form {
+    display: none;
+    gap: 10px;
+    margin-top: 22px;
+    padding: 20px;
+    border: 1px solid #d7bc9c;
+    border-radius: 12px;
+    background-color: #f8eddc;
+}
+
+#new-book-form label {
+    color: var(--forest-green);
+    font-weight: bold;
+}
+
+#new-book-form input {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #c8a984;
+    border-radius: 8px;
+    color: var(--brown);
+    background-color: #fffdf8;
+    font-family: "Quicksand", Arial, sans-serif;
+}
+
+#save-current-book-button {
+    width: fit-content;
+    margin-top: 8px;
+    padding: 10px 16px;
+    border: none;
+    border-radius: 22px;
+    color: var(--light-cream);
+    background-color: var(--forest-green);
+    cursor: pointer;
+    font-family: "Quicksand", Arial, sans-serif;
+    font-weight: bold;
+}
+
+#save-current-book-button:hover {
+    background-color: var(--brown);
+}

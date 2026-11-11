@@ -55,6 +55,66 @@ function addBook() {
 
     renderTBR();
 }
+/* CURRENTLY READING BOOK */
+
+let currentBook = JSON.parse(localStorage.getItem("currentBook")) || {
+    title: "Book Title",
+    author: "Author Name",
+    genre: "Genre Name"
+};
+
+function showNewBookForm() {
+    const newBookForm = document.getElementById("new-book-form");
+
+    if (newBookForm.style.display === "grid") {
+        newBookForm.style.display = "none";
+    } else {
+        newBookForm.style.display = "grid";
+    }
+}
+
+function saveCurrentBook() {
+    const titleInput = document.getElementById("current-book-title-input");
+    const authorInput = document.getElementById("current-book-author-input");
+    const genreInput = document.getElementById("current-book-genre-input");
+
+    const title = titleInput.value.trim();
+    const author = authorInput.value.trim();
+    const genre = genreInput.value.trim();
+
+    if (title === "" || author === "" || genre === "") {
+        alert("Please fill out the title, author, and genre.");
+        return;
+    }
+
+    currentBook = {
+        title: title,
+        author: author,
+        genre: genre
+    };
+
+    localStorage.setItem("currentBook", JSON.stringify(currentBook));
+
+    updateCurrentBook();
+
+    titleInput.value = "";
+    authorInput.value = "";
+    genreInput.value = "";
+
+    document.getElementById("new-book-form").style.display = "none";
+}
+
+function updateCurrentBook() {
+    const currentTitle = document.getElementById("current-title");
+    const currentAuthor = document.getElementById("current-author");
+    const currentGenre = document.getElementById("current-genre");
+
+    if (currentTitle !== null) {
+        currentTitle.innerText = currentBook.title;
+        currentAuthor.innerText = "Author: " + currentBook.author;
+        currentGenre.innerText = "Genre: " + currentBook.genre;
+    }
+}
 
 function renderTBR() {
     const bookList = document.getElementById("tbr-list");
@@ -312,3 +372,4 @@ function renderStats() {
 
 renderTBR();
 updateBooksRead();
+updateCurrentBook();

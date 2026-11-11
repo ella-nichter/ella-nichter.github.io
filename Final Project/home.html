@@ -39,9 +39,24 @@
                     <p id="current-author">Author: Author Name</p>
                     <p id="current-genre">Genre: Genre Name</p>
 
-                    <a href="tbr.html">
-                        <button id="start-new-button">Start New Book</button>
-                    </a>
+                    <button id="start-new-button" onclick="showNewBookForm()">
+                        Start New Book
+                    </button>
+
+                    <div id="new-book-form">
+                        <label for="current-book-title-input">Book Title</label>
+                        <input type="text" id="current-book-title-input" placeholder="Enter book title">
+
+                        <label for="current-book-author-input">Author</label>
+                        <input type="text" id="current-book-author-input" placeholder="Enter author name">
+
+                        <label for="current-book-genre-input">Genre</label>
+                        <input type="text" id="current-book-genre-input" placeholder="Enter genre">
+
+                        <button id="save-current-book-button" onclick="saveCurrentBook()">
+                            Save Current Book
+                        </button>
+                    </div>
                 </div>
             </div>
         </section>
@@ -65,6 +80,5 @@
     </main>
 
     <script src="script.js"></script>
-
 </body>
 </html>
